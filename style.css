@@ -1,0 +1,282 @@
+@font-face {
+  font-family: certificate;
+  src: url("font/certificate.0tf");
+}
+@font-face {
+  font-family: name;
+  src: url("font/name.ttf");
+}
+@font-face {
+  font-family: apreciation;
+  src: url("font/apreciation.otf");
+}
+@font-face {
+  font-family: content;
+  src: url("font/content.otf");
+}
+
+@media all{
+	body.printView, body.printView:before, body.printView:after { 
+		border : none !important;
+	}
+	.certificate-wrapper {
+	  overflow: hidden;
+	  width: 297mm;
+	  height: 210mm;
+	  position: relative;
+	  background: #ffffff !important;
+	  line-height: normal;
+	}
+	.certificate-wrapper .certificate-background {
+	  /*position : absolute;*/
+	  right: 0mm;
+	  top: auto;
+	  width: 297mm;
+	  height: 210mm;
+	  overflow: hidden;
+	  position: relative;
+	}
+	.certificate-wrapper .certificate-background .recttop {
+	  /*position : absolute;*/
+	  right: -8mm;
+	  top: 0mm;
+	  width: 170mm;
+	  height: 14.5mm;
+	  background: #003366 !important;
+	  transform: skewX(60deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .recttop1 {
+	  /*position : absolute;*/
+	  right:163mm;
+	  top: 0mm;
+	  width: 20mm;
+	  height: 14.5mm;
+	  background: #e6b800 !important;
+	  transform: skewX(60deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectright {
+	  width: 14.5mm;
+	  height: 60mm;
+	  top: 8mm;
+	  right: 0mm;
+	  background: #003366 !important;
+	  transform: skewY(20deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectright2 {
+	  width: 14.5mm;
+	  height: 10mm;
+	  top: 68mm;
+	  right: 0mm;
+	  background: #e6b800 !important;
+	  transform: skewY(20deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectbtm {
+	  /*position : absolute;*/
+	  right: 0mm;
+	  bottom: 0mm;
+	  width: 110mm;
+	  height: 14.5mm;
+	  background: #003366 !important;
+	  transform: skewX(-50deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectright1 {
+	  /*position : absolute;*/
+	  right:-5mm;
+	  bottom: 0mm;
+	  width: 19.5mm;
+	  height: 60mm;
+	  background: #003366 !important;
+	  transform: skewY(-25deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectbtm1 {
+	  /*position : absolute;*/
+	  left: 0mm;
+	  width: 14.5mm;
+	  height: 68mm;
+	  bottom: -8mm;
+	  background: #003366 !important;
+	  transform: skewY(20deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectbtm2 {
+	  /*position : absolute;*/
+	  width: 170mm;
+	  height: 14.5mm;
+	 bottom: 0mm;
+	  left: 0mm;
+	  background: #003366 !important;
+	  transform: skewX(60deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectbtm3 {
+	  /*position : absolute;*/
+	  left:170mm;
+	  bottom: 0mm;
+	  width: 20mm;
+	  height: 14.5mm;
+	  background: #e6b800 !important;
+	  transform: skewX(60deg);
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-background .rectbtm4 {
+	  /*position : absolute;*/
+	  left: 0mm;
+	  width: 14.5mm;
+	  height: 10mm;
+	  bottom: 60mm;
+	  background: #e6b800 !important;
+	  transform: skewY(20deg);
+	  position: absolute;
+	}
+	
+	.certificate-wrapper .certificate-background .boxbtm {
+	position: absolute;
+	  left: 18mm;
+	  top: 18mm;
+	  right: 18mm;
+	  bottom: 18mm;
+	  
+	  border-left: 5pt solid #e6b800 !important;
+	  border-bottom: 5pt solid #e6b800 !important;
+	  border-right: 5pt solid #e6b800 !important;
+	  border-top: 5pt solid #e6b800 !important;
+	}
+	  
+	.certificate-wrapper .certificate-content {
+	  top: 20mm;
+	  right: 20mm;
+	  bottom: 20mm;
+	  left: 20mm;
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-content .title {
+	  position: absolute;
+	  left: 0mm;
+	  top: 25mm; 
+	  right: 0mm;
+	  font-size: 70pt;
+	  text-shadow: #806600 !important;
+	  text-align: center;
+	  margin: auto;
+	  font-family : certificate;
+	  line-height: normal;
+	}
+	
+	.certificate-wrapper .certificate-content .subtitle {
+	  position: absolute;
+	  left: 0mm;
+	  top: 50mm;
+	  right: 0mm;
+	  color: #806600 !important;
+	  font-family: certificate;
+	  font-size: 30pt;
+	  text-align: center;
+	  margin: auto;
+	}
+	.certificate-wrapper .certificate-content .initial-content {
+	  position: absolute;
+	  left: 0mm;
+	  top: 63mm;
+	  right: 0mm;
+	  font-size: 14pt;
+	  font-family: content;
+	  text-align: center;
+	  margin: auto;
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-content .candidate-name {
+	  position: absolute;
+	  left: 0mm;
+	  top: 75mm;
+	  right: 0mm;
+	  font-family: name;
+	  font-size: 60pt;
+	  color: #000080 !important;
+	  text-align: center;
+	  margin: auto;
+	}
+	.certificate-wrapper .certificate-content .main-content {
+	  position: absolute;
+	  left: 15mm;
+	  top: 105mm;
+	  right: 15mm;
+	  font-family: content;
+	  font-size: 14pt;
+	  text-align: center;
+	  margin: auto;
+	  position: absolute;
+	  border : none;
+	  line-height : normal;
+	}
+
+	.certificate-wrapper .certificate-content .main-content p {
+		margin-top: 3mm;
+	}
+	
+	.certificate-wrapper .certificate-content .date {
+	   left: 40mm;
+	  top: 140mm;
+	  font-size: 12pt;
+	  border-top: 0.5pt solid;
+	  line-height : 8mm;
+	  position: absolute;
+	  font-family: apreciation;
+	}
+	.certificate-wrapper .certificate-content .sign-president-img
+	{
+		top: 125mm;
+		right: 40mm;
+		width : 40mm;
+		height : 20mm;
+		position : absolute;
+	}
+	
+	.certificate-wrapper .certificate-content .sign-president {
+	  right: 40mm;
+	  top: 140mm;
+	  font-size: 12pt;
+	  border-top: 0.5pt solid;
+	  line-height : 8mm;
+	  font-family: apreciation;
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-content .org-name {
+	  position: absolute;
+	  left:0mm;
+	  bottom: 11mm;
+	  right: 0mm;
+	  text-align: center;
+	  font-size: 18pt;
+	  font-weight: bold;
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-content .org-address {
+	  right: 0mm;
+	  bottom: 0mm;
+	   left:0mm;
+	  text-align: center;
+	  font-size: 12pt;
+	  font-weight: bold;
+	  position: absolute;
+	}
+	.certificate-wrapper .certificate-content .org-address p {
+	  margin-bottom: 0mm;
+	  margin-top : 0mm;
+	}
+	
+.rating {
+	position: absolute;
+	  left: 0mm;
+	  top: 40mm;
+	  right: 0mm;
+	  text-align: center;
+    font-size: 24px; /* Adjust the font size as needed */
+    color: gold; /* Set the color of the stars */
+}
+}
