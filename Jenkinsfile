@@ -2,10 +2,10 @@ pipeline {
     agent any
     
     stages {
-        stage('Clone Repository') {
+        stage('Clone repository') {
             steps {
                 script {
-                    echo "Step 1: Cloning repository"
+                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/PunamDeore/cert.git']]])
                     sh 'ls -lrt'
                     if (fileExists('Dockerfile')) {
                         echo "Clone was successful"
