@@ -4,13 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building...'
+                // Your build steps here if needed
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying...'
+                // SSH into the instance and copy the index.html file
+                script {
+                    sh 'ssh user@your_instance_ip "mkdir -p /path/to/destination"'
+                    sh 'scp index.html user@your_instance_ip:/path/to/destination'
+                }
             }
         }
     }
 }
+
