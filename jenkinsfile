@@ -5,19 +5,44 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                // Your build steps here if needed
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // SSH into the instance and copy the index.html file
                 script {
-                    sh 'ssh user@your_instance_ip "mkdir -p /path/to/destination"'
-                    sh 'scp index.html user@your_instance_ip:/path/to/destination'
+                    sh 'ssh user@34.201.109.160 "mkdir -p /path/to/destination"'
+                    sh '''
+                        echo "<!DOCTYPE html>"
+                        echo "<html>"
+                        echo "<head>"
+                        echo "<link rel='stylesheet' type='text/css' href='style.css'>"
+                        echo "<link rel='stylesheet' type='text/css' href='./css/bootstrap.min.css'>"
+                        echo "</head>"
+                        echo "<body>"
+                        echo "<div class='certificate-wrapper'>"
+                        echo "<div class='certificate-background'>"
+                        echo "<div class='recttop'></div>"
+                        echo "<div class='recttop1'></div>"
+                        echo "<div class='rectright'></div>"
+                        echo "<div class='rectright2'></div>"
+                        echo "<div class='rectbtm'></div>"
+                        echo "<div class='rectbtm1'></div>"
+                        echo "<div class='rectbtm2'></div>"
+                        echo "<div class='rectbtm3'></div>"
+                        echo "<div class='rectbtm4'></div>"
+                        echo "<div class='rectright1'></div>"
+                        echo "<div class='boxbtm'></div>"
+                        echo "<div class='rating'>&#9733; &#9733; &#9733; &#9733; &#9733;</div>"
+                        echo "<div class='crown'></div>"
+                        echo "</div>"
+                        echo "</div>"
+                        echo "</body>"
+                        echo "</html>" > index.html
+                    '''
+                    sh 'scp index.html user@34.201.109.160:/path/to/destination'
                 }
             }
         }
     }
 }
-
